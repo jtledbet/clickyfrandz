@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/clickyfrandz/static/css/main.e4a623e0.chunk.css",
-    "main.js": "/clickyfrandz/static/js/main.492c2e7b.chunk.js",
-    "main.js.map": "/clickyfrandz/static/js/main.492c2e7b.chunk.js.map",
+    "main.js": "/clickyfrandz/static/js/main.c5a700a4.chunk.js",
+    "main.js.map": "/clickyfrandz/static/js/main.c5a700a4.chunk.js.map",
     "runtime~main.js": "/clickyfrandz/static/js/runtime~main.42da85d2.js",
     "runtime~main.js.map": "/clickyfrandz/static/js/runtime~main.42da85d2.js.map",
     "static/js/2.65aa1cca.chunk.js": "/clickyfrandz/static/js/2.65aa1cca.chunk.js",
     "static/js/2.65aa1cca.chunk.js.map": "/clickyfrandz/static/js/2.65aa1cca.chunk.js.map",
     "index.html": "/clickyfrandz/index.html",
-    "precache-manifest.2e03f5b1e01060fae26d8ecf162033f9.js": "/clickyfrandz/precache-manifest.2e03f5b1e01060fae26d8ecf162033f9.js",
+    "precache-manifest.0d3cad818ea599f19124ccb9f4357a97.js": "/clickyfrandz/precache-manifest.0d3cad818ea599f19124ccb9f4357a97.js",
     "service-worker.js": "/clickyfrandz/service-worker.js",
     "static/css/main.e4a623e0.chunk.css.map": "/clickyfrandz/static/css/main.e4a623e0.chunk.css.map",
-    "static/media/cat.png": "/clickyfrandz/static/media/cat.6b6da7ad.png",
-    "static/media/dog.png": "/clickyfrandz/static/media/dog.b1360281.png"
+    "static/media/Cat.png": "/clickyfrandz/static/media/Cat.6b6da7ad.png",
+    "static/media/Dog.png": "/clickyfrandz/static/media/Dog.b1360281.png"
   }
 }
