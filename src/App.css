@@ -1,0 +1,56 @@
+.App {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.App h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0 0 8px;
+}
+
+.App > p {
+  color: #aaa;
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+}
+
+.App h3 {
+  font-size: 1.1rem;
+  color: #7eb8f7;
+  margin: 0 0 32px;
+  font-weight: 500;
+}
+
+.friend-zone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.friend-zone img {
+  height: 160px;
+  width: 160px;
+  background-color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  object-fit: contain;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.friend-zone img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+}
+
+.friend-zone h2 {
+  font-size: 2rem;
+  margin: 40px 0;
+}
