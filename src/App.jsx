@@ -14,6 +14,12 @@ const FRIENDS = [
   { name: 'chinchilla', img: chinchilla, id: 5 },
 ]
 
+const DIFFICULTIES = [
+  { label: 'Easy', count: 3 },
+  { label: 'Medium', count: 4 },
+  { label: 'Hard', count: 5 },
+]
+
 function shuffle(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -25,20 +31,33 @@ function shuffle(arr) {
 
 class App extends Component {
   state = {
+    difficulty: 3,
     win: false,
     score: 0,
     clickedFriends: [],
     roundEnd: false,
-    friends: shuffle(FRIENDS),
+    friends: shuffle(FRIENDS).slice(0, 3),
+  }
+
+  setDifficulty = (count) => {
+    this.setState({
+      difficulty: count,
+      win: false,
+      score: 0,
+      clickedFriends: [],
+      roundEnd: false,
+      friends: shuffle(FRIENDS).slice(0, count),
+    })
   }
 
   roundReset = () => {
+    const { difficulty } = this.state
     this.setState({
       win: false,
       score: 0,
       clickedFriends: [],
       roundEnd: false,
-      friends: shuffle(FRIENDS),
+      friends: shuffle(FRIENDS).slice(0, difficulty),
     })
   }
 
@@ -67,11 +86,22 @@ class App extends Component {
   }
 
   render() {
-    const { score, roundEnd, win, friends } = this.state
+    const { score, roundEnd, win, friends, difficulty } = this.state
     return (
       <div className="App">
         <h1>Clicky Friends</h1>
         <p>Click all the friends, with no duplicates or you lose.</p>
+        <div className="difficulty">
+          {DIFFICULTIES.map(({ label, count }) => (
+            <button
+              key={count}
+              className={difficulty === count ? 'active' : ''}
+              onClick={() => this.setDifficulty(count)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
         <h3>Score: {score}</h3>
         <div className="friend-zone">
           {roundEnd && !win && <h2>You lose.</h2>}

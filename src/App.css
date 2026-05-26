@@ -18,6 +18,35 @@
   margin: 0 0 6px;
 }
 
+.difficulty {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.difficulty button {
+  background: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+  padding: 6px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.difficulty button:hover {
+  border-color: #7eb8f7;
+  color: #7eb8f7;
+}
+
+.difficulty button.active {
+  border-color: #7eb8f7;
+  color: #7eb8f7;
+  font-weight: 600;
+}
+
 .App h3 {
   font-size: 1.1rem;
   color: #7eb8f7;
