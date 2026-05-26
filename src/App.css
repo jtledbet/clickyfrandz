@@ -1,7 +1,77 @@
+/* ── Home screen ── */
+
+.home {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 24px 48px;
+  text-align: center;
+}
+
+.home > h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin: 0 0 8px;
+}
+
+.home > p {
+  color: #aaa;
+  margin: 0 0 48px;
+}
+
+.game-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px 28px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  border-color: #7eb8f7;
+}
+
+.game-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.game-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.game-card.disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.game-card.disabled:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Shared game layout ── */
+
 .App {
   max-width: 860px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: 32px 24px 48px;
   text-align: center;
 }
 
@@ -17,6 +87,23 @@
   font-size: 1.05rem;
   margin: 0 0 6px;
 }
+
+.back-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0 0 24px;
+  transition: color 0.15s;
+}
+
+.back-btn:hover {
+  color: #eee;
+}
+
+/* ── Difficulty selector ── */
 
 .difficulty {
   display: flex;
@@ -54,6 +141,8 @@
   font-weight: 500;
 }
 
+/* ── Friend grid ── */
+
 .friend-zone {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +156,7 @@
   background-color: white;
   border-radius: 16px;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.1s;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
   object-fit: contain;
   padding: 12px;
@@ -79,7 +168,31 @@
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
 }
 
+/* Highlighted during Frandz Says playback */
+.friend-zone img.active {
+  transform: scale(1.12);
+  background-color: #fffbe6;
+  box-shadow: 0 0 0 4px #f7d07e, 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
 .friend-zone h2 {
   font-size: 2rem;
   margin: 40px 0;
+}
+
+.play-again {
+  background: #7eb8f7;
+  border: none;
+  border-radius: 12px;
+  color: #1a1a2e;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  margin-top: 32px;
+  transition: opacity 0.15s;
+}
+
+.play-again:hover {
+  opacity: 0.85;
 }
