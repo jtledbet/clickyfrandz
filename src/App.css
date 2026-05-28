@@ -220,29 +220,81 @@
   opacity: 0.85;
 }
 
-/* ── Odd One Out grid ── */
+/* ── Memory Match grid ── */
 
-.odd-grid {
+.memory-grid {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   margin: 0 auto;
-  max-width: 580px;
+  max-width: 560px;
 }
 
-.odd-grid img {
-  width: 100%;
+.memory-card {
   aspect-ratio: 1;
-  background-color: white;
-  border-radius: 12px;
+  perspective: 600px;
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-  object-fit: contain;
+}
+
+.memory-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+.memory-card.face-up .memory-card-inner {
+  transform: rotateY(180deg);
+}
+
+.memory-card-back,
+.memory-card-front {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  backface-visibility: hidden;
+}
+
+.memory-card-back {
+  background: linear-gradient(135deg, #2a2a4a 0%, #1a1a3a 100%);
+  border: 2px solid rgba(126, 184, 247, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.memory-card-back::after {
+  content: '?';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgba(126, 184, 247, 0.4);
+}
+
+.memory-card-front {
+  background-color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px;
   box-sizing: border-box;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.odd-grid img:hover {
-  transform: scale(1.08);
+.memory-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.memory-card:not(.face-up):hover .memory-card-back {
+  border-color: #7eb8f7;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.memory-card.matched .memory-card-front {
+  background-color: #e6ffe6;
+  box-shadow: 0 0 0 3px #6fcf97, 0 4px 16px rgba(0, 0, 0, 0.4);
 }
