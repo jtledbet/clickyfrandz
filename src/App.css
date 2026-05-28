@@ -134,6 +134,21 @@
   font-weight: 600;
 }
 
+.mute-btn {
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  margin-left: 8px;
+  transition: border-color 0.15s;
+}
+
+.mute-btn:hover {
+  border-color: #7eb8f7;
+}
+
 .App h3 {
   font-size: 1.1rem;
   color: #7eb8f7;
@@ -168,11 +183,19 @@
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
 }
 
-/* Highlighted during Frandz Says playback */
+/* Highlighted during Steve Says playback */
 .friend-zone img.active {
   transform: scale(1.12);
   background-color: #fffbe6;
   box-shadow: 0 0 0 4px #f7d07e, 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Tactile feedback when the player taps during their turn */
+.friend-zone img.pressed {
+  transform: scale(0.94);
+  background-color: #d6ecff;
+  box-shadow: 0 0 0 4px #7eb8f7, inset 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.05s ease, box-shadow 0.05s ease, background-color 0.05s;
 }
 
 .friend-zone h2 {
