@@ -196,3 +196,30 @@
 .play-again:hover {
   opacity: 0.85;
 }
+
+/* ── Odd One Out grid ── */
+
+.odd-grid {
+  display: grid;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 580px;
+}
+
+.odd-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  object-fit: contain;
+  padding: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.odd-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}

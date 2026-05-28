@@ -2,6 +2,7 @@ import { Component } from 'react'
 import './App.css'
 import BoopTheAminals from './games/BoopTheAminals'
 import SteveSays from './games/SteveSays'
+import OddOneOut from './games/OddOneOut'
 
 const GAMES = [
   {
@@ -15,10 +16,9 @@ const GAMES = [
     description: 'Crikey! Watch the sequence, then repeat it back.',
   },
   {
-    id: null,
-    title: '???',
-    description: 'Coming soon.',
-    disabled: true,
+    id: 'odd',
+    title: 'Odd One Out',
+    description: 'Find the animal that doesn\'t belong.',
   },
 ]
 
@@ -31,6 +31,7 @@ class App extends Component {
 
     if (currentGame === 'boop') return <BoopTheAminals onBack={back} />
     if (currentGame === 'steve') return <SteveSays onBack={back} />
+    if (currentGame === 'odd') return <OddOneOut onBack={back} />
 
     return (
       <div className="home">
