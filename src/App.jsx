@@ -2,7 +2,7 @@ import { Component } from 'react'
 import './App.css'
 import BoopTheAminals from './games/BoopTheAminals'
 import SteveSays from './games/SteveSays'
-import OddOneOut from './games/OddOneOut'
+import MemoryMatch from './games/MemoryMatch'
 
 const GAMES = [
   {
@@ -12,13 +12,13 @@ const GAMES = [
   },
   {
     id: 'steve',
-    title: 'Steve Says',
-    description: 'Crikey! Watch the sequence, then repeat it back.',
+    title: 'Copy Cat',
+    description: 'Watch the sequence, then copy it back.',
   },
   {
-    id: 'odd',
-    title: 'Odd One Out',
-    description: 'Find the animal that doesn\'t belong.',
+    id: 'memory',
+    title: 'Memory Match',
+    description: 'Flip cards to find matching pairs. Remember what you\'ve seen.',
   },
 ]
 
@@ -31,7 +31,7 @@ class App extends Component {
 
     if (currentGame === 'boop') return <BoopTheAminals onBack={back} />
     if (currentGame === 'steve') return <SteveSays onBack={back} />
-    if (currentGame === 'odd') return <OddOneOut onBack={back} />
+    if (currentGame === 'memory') return <MemoryMatch onBack={back} />
 
     return (
       <div className="home">
