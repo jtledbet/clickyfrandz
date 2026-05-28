@@ -12,8 +12,8 @@ const GAMES = [
   },
   {
     id: 'steve',
-    title: 'Steve Says',
-    description: 'Crikey! Watch the sequence, then repeat it back.',
+    title: 'Copy Cat',
+    description: 'Watch the sequence, then copy it back.',
   },
   {
     id: 'memory',

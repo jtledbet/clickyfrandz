@@ -113,8 +113,8 @@ class SteveSays extends Component {
     return (
       <div className="App">
         <button className="back-btn" onClick={this.props.onBack}>← Back</button>
-        <h1>Steve Says</h1>
-        <p>Crikey! Watch the sequence, then repeat it back. Each round adds one more.</p>
+        <h1>Copy Cat</h1>
+        <p>Watch the sequence, then copy it back. Each round adds one more.</p>
         <div className="difficulty">
           {DIFFICULTIES.map(d => (
             <button
@@ -135,14 +135,14 @@ class SteveSays extends Component {
         </div>
         <h3>
           {showing
-            ? 'Crikey, watch this!'
+            ? 'Watch closely...'
             : gameOver
-            ? `Blimey! You made it to a sequence of ${sequence.length}!`
+            ? `Not bad! You made it to ${sequence.length} in a row.`
             : `Round ${score + 1}`}
         </h3>
         <div className="friend-zone">
           {gameOver
-            ? <button className="play-again" onClick={() => this.startGame(difficulty)}>Have another go!</button>
+            ? <button className="play-again" onClick={() => this.startGame(difficulty)}>Try again</button>
             : friends.map(f => {
                 const cls = [
                   activeId === f.id ? 'active' : '',
