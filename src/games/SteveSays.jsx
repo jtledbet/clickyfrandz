@@ -15,7 +15,7 @@ function buildSequence(friends, length) {
   return Array.from({ length }, () => ids[Math.floor(Math.random() * ids.length)])
 }
 
-class FrandzSays extends Component {
+class SteveSays extends Component {
   state = {
     difficulty: DIFFICULTIES[0],
     friends: shuffle(FRIENDS).slice(0, 3),
@@ -77,7 +77,6 @@ class FrandzSays extends Component {
       return
     }
 
-    // Completed the sequence — grow it by one and replay
     const newSeq = [...sequence, buildSequence(friends, 1)[0]]
     this.setState(
       { sequence: newSeq, playerIndex: 0, score: newSeq.length - difficulty.startLen },
@@ -90,8 +89,8 @@ class FrandzSays extends Component {
     return (
       <div className="App">
         <button className="back-btn" onClick={this.props.onBack}>← Back</button>
-        <h1>Frandz Says</h1>
-        <p>Watch the sequence, then repeat it. Each round adds one more.</p>
+        <h1>Steve Says</h1>
+        <p>Crikey! Watch the sequence, then repeat it back. Each round adds one more.</p>
         <div className="difficulty">
           {DIFFICULTIES.map(d => (
             <button
@@ -103,10 +102,16 @@ class FrandzSays extends Component {
             </button>
           ))}
         </div>
-        <h3>{showing ? 'Watch...' : gameOver ? `Game over — sequence of ${sequence.length}` : `Round ${score + 1}`}</h3>
+        <h3>
+          {showing
+            ? 'Crikey, watch this!'
+            : gameOver
+            ? `Blimey! You made it to a sequence of ${sequence.length}!`
+            : `Round ${score + 1}`}
+        </h3>
         <div className="friend-zone">
           {gameOver
-            ? <button className="play-again" onClick={() => this.startGame(difficulty)}>Play again</button>
+            ? <button className="play-again" onClick={() => this.startGame(difficulty)}>Have another go!</button>
             : friends.map(f => (
                 <img
                   key={f.id}
@@ -124,4 +129,4 @@ class FrandzSays extends Component {
   }
 }
 
-export default FrandzSays
+export default SteveSays

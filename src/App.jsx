@@ -1,18 +1,18 @@
 import { Component } from 'react'
 import './App.css'
-import ClickyFrandz from './games/ClickyFrandz'
-import FrandzSays from './games/FrandzSays'
+import BoopTheAminals from './games/BoopTheAminals'
+import SteveSays from './games/SteveSays'
 
 const GAMES = [
   {
-    id: 'clicky',
-    title: 'Clicky Frandz',
-    description: 'Click each friend exactly once — no repeats.',
+    id: 'boop',
+    title: 'Boop the Aminals',
+    description: 'Boop each aminal exactly once — no double boops.',
   },
   {
-    id: 'simon',
-    title: 'Frandz Says',
-    description: 'Watch the sequence, then repeat it back.',
+    id: 'steve',
+    title: 'Steve Says',
+    description: 'Crikey! Watch the sequence, then repeat it back.',
   },
   {
     id: null,
@@ -29,13 +29,13 @@ class App extends Component {
     const { currentGame } = this.state
     const back = () => this.setState({ currentGame: null })
 
-    if (currentGame === 'clicky') return <ClickyFrandz onBack={back} />
-    if (currentGame === 'simon')  return <FrandzSays  onBack={back} />
+    if (currentGame === 'boop') return <BoopTheAminals onBack={back} />
+    if (currentGame === 'steve') return <SteveSays onBack={back} />
 
     return (
       <div className="home">
-        <h1>Frandz</h1>
-        <p>Choose a game.</p>
+        <h1>Shell Games</h1>
+        <p>Choose your game.</p>
         <div className="game-cards">
           {GAMES.map(g => (
             <div

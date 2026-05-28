@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { FRIENDS, DIFFICULTIES, shuffle } from './shared'
 
-class ClickyFrandz extends Component {
+class BoopTheAminals extends Component {
   state = {
     difficulty: 3,
     win: false,
@@ -62,8 +62,8 @@ class ClickyFrandz extends Component {
     return (
       <div className="App">
         <button className="back-btn" onClick={this.props.onBack}>← Back</button>
-        <h1>Clicky Frandz</h1>
-        <p>Click all the friends, with no duplicates or you lose.</p>
+        <h1>Boop the Aminals</h1>
+        <p>Boop each aminal exactly once — no double boops or you lose.</p>
         <div className="difficulty">
           {DIFFICULTIES.map(({ label, count }) => (
             <button
@@ -75,10 +75,10 @@ class ClickyFrandz extends Component {
             </button>
           ))}
         </div>
-        <h3>Score: {score}</h3>
+        <h3>Boops: {score}</h3>
         <div className="friend-zone">
-          {roundEnd && !win && <h2>You lose.</h2>}
-          {roundEnd && win && <h2>You win!</h2>}
+          {roundEnd && !win && <h2>Double boop! You lose.</h2>}
+          {roundEnd && win && <h2>You booped 'em all!</h2>}
           {!roundEnd && friends.map(f => (
             <img key={f.id} src={f.img} alt={f.name} onClick={() => this.onClick(f.id)} />
           ))}
@@ -88,4 +88,4 @@ class ClickyFrandz extends Component {
   }
 }
 
-export default ClickyFrandz
+export default BoopTheAminals
