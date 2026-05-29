@@ -19,7 +19,7 @@ src/
   index.css             Body/global styles only
   games/
     shared.js           FRIENDS array, DIFFICULTIES array, shuffle()
-    BoopTheAminals.jsx  Game 1
+    BoopTheAbidals.jsx  Game 1
     SteveSays.jsx       Game 2 (displayed as "Copy Cat")
     MemoryMatch.jsx     Game 3
     sound.js            Web Audio tone generator used by SteveSays
@@ -29,7 +29,7 @@ docs/                   Built output — committed to repo for GitHub Pages
 
 ## Games
 
-**Boop the Aminals** — click each animal exactly once, no repeats.
+**Boop the Abidals** — click each animal exactly once, no repeats.
 
 **Copy Cat** (file: `SteveSays.jsx`) — Simon Says variant. Watch the sequence light up, then repeat it back. Each correct round appends one more. Sound via `sound.js` (pentatonic scale per animal, buzzer on wrong tap). Difficulty controls animal count and starting sequence length.
 

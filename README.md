@@ -4,7 +4,7 @@ A small collection of React mini-games starring the same five animal friends (do
 
 ## The games
 
-- **Boop the Aminals** — click each animal exactly once, no repeats. The board reshuffles after every click, so you have to remember who you've already booped.
+- **Boop the Abidals** — click each animal exactly once, no repeats. The board reshuffles after every click, so you have to remember who you've already booped.
 - **Copy Cat** (Simon Says) — watch the sequence light up, then tap it back. Each correct round adds one more. Pentatonic tones per animal + a buzzer on wrong taps via the Web Audio API; mute toggle in the difficulty bar.
 - **Memory Match** — classic card-flip pair game. Flip two cards, find matching animals. Difficulty controls grid size.
 
@@ -17,7 +17,7 @@ src/          ← edit this
   index.css     base/body styles
   main.jsx      entry point (don't touch)
   games/
-    BoopTheAminals.jsx
+    BoopTheAbidals.jsx
     SteveSays.jsx       (displayed as "Copy Cat")
     MemoryMatch.jsx
     shared.js           FRIENDS array, shuffle helper
