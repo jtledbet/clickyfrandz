@@ -1,6 +1,6 @@
 # Shell Games
 
-A small React mini-game collection. Lives at ledsec.dev. Source is in `src/`, built output is in `docs/` (served by GitHub Pages).
+A small React mini-game collection. Lives at `ledsec.dev/abidal_games/` (a project page under the portfolio repo's custom domain). Source is in `src/`, built output is in `docs/` (served by GitHub Pages).
 
 ## Stack
 
@@ -14,7 +14,7 @@ A small React mini-game collection. Lives at ledsec.dev. Source is in `src/`, bu
 ```
 src/
   main.jsx              Entry point
-  App.jsx               Home screen shell — routes between games
+  App.jsx               Home screen shell — routes between games, "Back to portfolio" link
   App.css               All styles for home + all games
   index.css             Body/global styles only
   games/
@@ -25,7 +25,6 @@ src/
     sound.js            Web Audio tone generator used by SteveSays
   assets/               Animal PNGs (dog, cat, bunny, bird, chinchilla)
 docs/                   Built output — committed to repo for GitHub Pages
-  CNAME                 ledsec.dev
 ```
 
 ## Games
@@ -45,15 +44,16 @@ docs/                   Built output — committed to repo for GitHub Pages
 
 ## Deployment
 
-- GitHub Pages serves the `docs/` folder on master
-- Custom domain: ledsec.dev (CNAME in `docs/CNAME`)
-- `vite.config.js` has `base: '/'` — don't change this back to `/clickyfrandz/`
-- To deploy: build, commit `docs/`, push to master (via PR)
+- GitHub Pages serves the `docs/` folder on `main`
+- Lives at `ledsec.dev/abidal_games/` — the apex `ledsec.dev` is owned by the portfolio repo (`jtledbet.github.io`); this repo is a project page that inherits the custom domain
+- **Do not add a `docs/CNAME` file here** — it would try to claim the apex and break the portfolio
+- `vite.config.js` has `base: '/abidal_games/'` so asset URLs resolve under the subpath; don't change it back to `/`
+- To deploy: build, commit `docs/`, push to `main` (via PR)
 
 ## Dev
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173/
+npm run dev      # http://localhost:5173/abidal_games/
 npm run build    # outputs to docs/
 ```

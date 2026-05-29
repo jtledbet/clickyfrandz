@@ -35,6 +35,7 @@ class App extends Component {
 
     return (
       <div className="home">
+        <a className="home-back" href="/portfolio/">← Back to portfolio</a>
         <h1>Shell Games</h1>
         <p>Choose your game.</p>
         <div className="game-cards">
