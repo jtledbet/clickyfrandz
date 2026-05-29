@@ -1,14 +1,14 @@
 import { Component } from 'react'
 import './App.css'
-import BoopTheAminals from './games/BoopTheAminals'
+import BoopTheAbidals from './games/BoopTheAbidals'
 import SteveSays from './games/SteveSays'
 import MemoryMatch from './games/MemoryMatch'
 
 const GAMES = [
   {
     id: 'boop',
-    title: 'Boop the Aminals',
-    description: 'Boop each aminal exactly once — no double boops.',
+    title: 'Boop the Abidals',
+    description: 'Boop each abidal exactly once — no double boops.',
   },
   {
     id: 'steve',
@@ -29,12 +29,13 @@ class App extends Component {
     const { currentGame } = this.state
     const back = () => this.setState({ currentGame: null })
 
-    if (currentGame === 'boop') return <BoopTheAminals onBack={back} />
+    if (currentGame === 'boop') return <BoopTheAbidals onBack={back} />
     if (currentGame === 'steve') return <SteveSays onBack={back} />
     if (currentGame === 'memory') return <MemoryMatch onBack={back} />
 
     return (
       <div className="home">
+        <a className="home-back" href="/portfolio/">← Back to portfolio</a>
         <h1>Shell Games</h1>
         <p>Choose your game.</p>
         <div className="game-cards">

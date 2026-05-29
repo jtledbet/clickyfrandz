@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { FRIENDS, DIFFICULTIES, shuffle } from './shared'
 
-class BoopTheAminals extends Component {
+class BoopTheAbidals extends Component {
   state = {
     difficulty: 3,
     win: false,
@@ -62,8 +62,8 @@ class BoopTheAminals extends Component {
     return (
       <div className="App">
         <button className="back-btn" onClick={this.props.onBack}>← Back</button>
-        <h1>Boop the Aminals</h1>
-        <p>Boop each aminal exactly once — no double boops or you lose.</p>
+        <h1>Boop the Abidals</h1>
+        <p>Boop each abidal exactly once — no double boops or you lose.</p>
         <div className="difficulty">
           {DIFFICULTIES.map(({ label, count }) => (
             <button
@@ -88,4 +88,4 @@ class BoopTheAminals extends Component {
   }
 }
 
-export default BoopTheAminals
+export default BoopTheAbidals
